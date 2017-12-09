@@ -6,8 +6,8 @@
 ###### how to run program
 ###### Usage
 - `python app.py` then visit `localhost:5000`
-# https://github.com/Jeff117/Project1
-# future work
+###### https://github.com/Jeff117/Project1
+###### future work
 
 
 
