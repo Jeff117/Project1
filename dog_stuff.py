@@ -3,17 +3,16 @@ import os
 # Signed_in = [("ADmin","Test1234")]
 Animal_classes = []
 file_Name = open("static/Dogs.txt")
-file_Name2 = open("static/people.txt",encoding="utf8")
 #==============================================================
 #Class for keeping all the Animal data in
 class Animal:
     kind = 'Stray'
-    def __init__(self, name, Age,breed,Location,Color,Picture):
+    def __init__(self, name, Age, breed, Location, Color, Picture):
         self.name = name
         self.age = Age
         self.type = breed
         self.color = Color
-        self.Locations = Location
+        self.Location = Location
         self.Picture = Picture
 #==============================================================
 
@@ -38,23 +37,32 @@ def Save_Animals():
     pickle.dump(Animal_classes,fileObject)
     fileObject.close()
 
+
 #Creates a new animal and pits it in the Animal_list
-def New_Animal( Animal_name,Type,Age,Location,Color,Picture):
-    Animal_type = Animal( Animal_name,Age,Type,Location,Color,Picture)
+def New_Animal( Name, Type, Age, Location, Color, Picture):
+    Animal_type = Animal( Name ,Age,Type,Location,Color,Picture)
     Animal_classes.append(Animal_type)
+    print(Animal_type.Location)
     Save_Animals()
 
-#Finds all animals in the Animal_list
-def Animal_search(Name,Breed,Color):
+#New_Animal("Carl", "Lab", 7, "Jersey", "Black", "")
+
+
+
+#Find1s all animals in the Animal_list
+def Animal_search(Name, Type, Age, Location, Color):
     Animal_list = []
     Animal_classes = Load_Animals()
+    print(Animal_classes[0].name)
     for item in Animal_classes:
         if(item.name == Name):
-            if(item.type == Breed):
-                if(item.color == Color):
-                    Animal_list.append(item)
-                    return Animal_list
-
+            if(item.type == Type):
+                if(item.age == Age):
+                    if(item.color == Color):
+                        Animal_list.append(item)
+                        print(Animal_list[0].age)
+                        return Animal_list
+#Animal_search("Carl", "Lab", 7, "Jersey", "Black")
 #==============================================================
 
 # #People classes
