@@ -1,5 +1,5 @@
 <head>
-<title> </title>
+<title> Report a lost friend </title>
 <style>
 
 .topnav {
@@ -27,22 +27,28 @@
 }
 </style>
 </head>
-<body background = "static/lost.jpg" > </body>
+<body style = "background-color:LightBlue" > </body>
 
 <div class="topnav">
   <a href = "" > Home </a>
-  <a class = "active" href="http://127.0.0.1:5000/Report">Report Lost Animals</a>
-  <a href="http://127.0.0.1:5000/Search">Search Animals</a>
+  <a class = "active" href="/Report">Report Lost Animals</a>
+  <a href="/Search">Search Animals</a>
   <a href=""> Shelter Page </a>
   <a href=""> Login </a>
 </div>
 
-<h1 style = "color:Crimson"> <center> Report a lost animal below by filling out the fields <br> </center>
+<h1 style = "color:Black"> <center> Report a lost animal below by filling out the fields <br> </center>
  </h1>
 
-<br><br><h2>
-Name  <input type = "text"> <br>
-Breed <input type = "text"> <br>
-Color <input type = "text"> <br>
-
+<br><br><h2> <form action = "">
+<center>
+Name:  <input type = "text" name = "name"> <br>
+Type:  <input type = "text" type = "type"> <br>
+Location: <input type = "text" location = "location"> <br>
+Age:  <input type = "text" age = "age"> <br>
+Breed: <input type = "text" breed = "breed"> <br>
+Color: <input type = "text" color = "color"> <br>
+<input type = "submit" vaue = "Submit">
+</center>
+</form>
 </h2>
