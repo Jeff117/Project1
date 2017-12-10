@@ -3,7 +3,7 @@ import os
 # Signed_in = [("ADmin","Test1234")]
 Animal_classes = []
 file_Name = open("static/Dogs.txt")
-#file_Name2 = open("static/people.txt",encoding="utf8")
+file_Name2 = open("static/people.txt",encoding="utf8")
 #==============================================================
 #Class for keeping all the Animal data in
 class Animal:
@@ -42,6 +42,7 @@ def Save_Animals():
 def New_Animal( Animal_name,Type,Age,Location,Color,Picture):
     Animal_type = Animal( Animal_name,Age,Type,Location,Color,Picture)
     Animal_classes.append(Animal_type)
+    Save_Animals()
 
 #Finds all animals in the Animal_list
 def Animal_search(Name,Breed,Color):
