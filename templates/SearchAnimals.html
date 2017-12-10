@@ -1,0 +1,62 @@
+<head>
+<title> Adopt a new buddy! </title>
+
+<style>
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body background = "static/dog.jpg">
+
+<div class="topnav">
+  <a href = "" > Home </a>
+  <a href= "http://127.0.0.1:5000/Report">Report Lost Animals</a>
+  <a class = "active" href="http://127.0.0.1:5000/Search">Search Animals</a>
+  <a href=""> Shelter Page </a>
+  <a href=""> Login </a>
+</div>
+
+<h1 style = "color:Crimson"> <center> Search for a new buddy to adopt below </center> </h1>
+<br><br>
+
+<form id="search" action = "{{url_for('SearchAnimal', dogname = [Name, Breed, Color])}}">
+<h2>
+Name:  <input type = "text"> <br>
+Breed: <input type = "text"> <br>
+Color: <input type = "text"> <br>
+<input type="submit" value="Submit">
+</form>
+
+
+<script>
+
+if(4=4)
+{
+  document.ElementById("search").innerHTML = "";
+}
+
+</script>
+</h2>
+</body>
