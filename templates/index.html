@@ -1,19 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }} </title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/index.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-    {% block body %}{% endblock %}
-    </div> <!-- /container -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block nav %}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li {% if active_home %} class="active" {% endif %}><a href="/">Home</a></li>
+        <li {% if active_shelter %} class="active" {% endif %}><a href="/shelter">Find Shelters</a></li>
+        <li {% if active_report %} class="active" {% endif %}><a href="/report">Report Stray</a></li>
+        <li {% if active_find %} class="active" {% endif %}><a href="/find">Find Animal</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/_logout">Log Out</a></li>
+    </ul>
+    </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+    </nav>
+{% endblock %}
+{% block body %}
+    <img id="banner" src="/static/Volunteer.jpg" alt="Banner Dog Image"/>
+    <h1>Welcome to the Animal Rescue center</h1>
+    <h3>About us</h3>
+    <p>This shelter has a long histor of finding good home for stray/abandoned animals.
+    We have always ensured that <b><i>EVERY</i></b> animal that comes to
+    us is welcomed and treated like family. Our history of animal care is surpassed by none
+    and we take alot of pride in the work that we do.</p>
+    <br/>
+    <img src="/static/img/about_me.jpg" alt="happy dog"/>
+    <br/>
+    <h3>ADOPT & FOSTER</h3>
+    <p>Our mission is to rescue, rehabilitate, and ultimately find good homes for abandoned
+    and stray animals in the Page area. Won’t you open your home today to an animal who’s ready for love?
+    We have opportunities for you to VOLUNTEER, FOSTER, and ADOPT with us!<br />Before you can begin
+    the process of welcoming a loving pet into your home, you’ll first need to submit an adoption, foster and/or
+     volunteer application to us by clicking on the link above:</p>
+     <br/>
+     <img src="../static/img/adoption.jpg" alt="Please rescue me!"/>
+     <br/>
+    <h3>Donate</h3>
+    <p>Every little bit helps! It takes a lot to run a caring facility like Page Animal Adoption Agency and
+    we’re always grateful for donations like kitty litter and cleaning supplies, but daily operations are costly. <br />
+    Make your donation today to help us cover the day-to-day operation at the PAA by on the “buy now” button below.
+    We’re so grateful our tails are wagging!</p>
+    <br/>
+    <img src="../static/img/donations.jpg" alt="Please donate to me!"/>
+    <br/>
+    <h3>Wacth A video on the types of animals we bring in</h3>
+    <a href="https://youtu.be/IO9d2PpP7tQ" target="_blank">
+    <video id="SadDog" src = "../static/SadDogs.mp4" type="video/mp4" controls
+    autoplay poster = "../static/sad.jpg">Your Browser Does not support this video
+    </video>
+    </a>
+{% endblock %}

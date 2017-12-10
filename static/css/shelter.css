@@ -1,0 +1,28 @@
+ format {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+}
+
+div {
+    background-color: lightgrey;
+    position: relative;
+    width: 1000px;
+    height: 1200px;
+    border: 55px solid green;
+    padding: 55px;
+    margin: 55px;
+}
+p {
+   background-color: lightgrey;
+   position: relative;
+   width:1000px;
+   height:100px;
+   border:55px solid green;
+   padding:55px;
+   margin:55px;
+}
+
+img {
+  padding: 22px;
+}
