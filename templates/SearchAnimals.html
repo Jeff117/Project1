@@ -28,34 +28,29 @@
 }
 </style>
 </head>
-<body background = "static/dog.jpg">
+<body style = "background-color:LightBlue">
 
 <div class="topnav">
   <a href = "" > Home </a>
-  <a href= "http://127.0.0.1:5000/Report">Report Lost Animals</a>
-  <a class = "active" href="http://127.0.0.1:5000/Search">Search Animals</a>
+  <a href= "/Report"> Report Lost Animals</a>
+  <a class = "active" href="/Search"> Search Animals</a>
   <a href=""> Shelter Page </a>
   <a href=""> Login </a>
 </div>
 
-<h1 style = "color:Crimson"> <center> Search for a new buddy to adopt below </center> </h1>
+<h1 style = "color:Black"> <center> Search for a new buddy to adopt below </center> </h1>
 <br><br>
 
-<form id="search" action = "{{url_for('SearchAnimal', dogname = [Name, Breed, Color])}}">
-    Name:  <input type = "text"> <br>
-    Breed: <input type = "text"> <br>
-    Color: <input type = "text"> <br>
-    <input type="submit" value="Submit">
+<form action = "/Log">
+<h2><center>
+Name: <input type = "text" name = "name"> <br>
+Breed: <input type = "text" breed = "breed"> <br>
+Location: <input type = "text" location = "location"> <br>
+Age:  <input type = "text" age = "age"> <br>
+Color: <input type = "text" color = "color"> <br>
+<input type="submit" value="Submit">
+</center>
 </form>
 
-
-<script>
-
-if(4=4)
-{
-  document.ElementById("search").innerHTML = "";
-}
-
-</script>
 </h2>
 </body>
