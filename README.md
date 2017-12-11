@@ -7,7 +7,8 @@
 ###### Usage
 - `python app.py` then visit `localhost:5000`
 ###### https://github.com/Jeff117/Project1
-###### future work
+###### we'll add more features and improve the format. 
+
 
 
 
