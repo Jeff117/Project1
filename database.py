@@ -1,5 +1,5 @@
 import mysql.connector
-
+#Cst 205, Project K9,This is the database used for logins and checking if the user is logged in,Shuyan Chi, 12/08/2017
 class Database:
     HOST = "localhost"
     USER = "root"
