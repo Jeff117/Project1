@@ -1,3 +1,5 @@
+#Cst 205, Project K9, Noah Thompson, 12/08/2017
+#all functions written by Noah Thompson
 import pickle
 import os
 # Signed_in = [("ADmin","Test1234")]
@@ -29,7 +31,8 @@ def Load_Animals():
                 return Animal_class
                 #print(Animal_class)
                 #Animal_classes.append(Animal_class)
-
+                
+#edits by Jeff san-paolo
 #Saving all current classes and all new classes
 def Save_Animals():
     # with(open(file_Name,'wb')) as fileObject:
@@ -37,7 +40,7 @@ def Save_Animals():
     pickle.dump(Animal_classes,fileObject)
     fileObject.close()
 
-
+#edits by Jeff san-paolo
 #Creates a new animal and pits it in the Animal_list
 def New_Animal( Name, Type, Age, Location, Color, Picture):
     Animal_type = Animal( Name ,Age,Type,Location,Color,Picture)
